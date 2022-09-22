@@ -46,3 +46,14 @@ using-r
 interpret-ls-coefficients
 handle-categorical-variables
 outliers-and-rank-deficiency
+variable-selection-and-regularization
+subset-selection
+ridge-regression
+lasso-regression
+regression-trees
+nonlinear-regression
+polynomials
+regression-splines
+smoothing-splines
+sinces-and-cosines
+a-glimpse-of-wavelets

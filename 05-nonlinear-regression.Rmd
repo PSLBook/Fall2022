@@ -1,0 +1,11 @@
+# Nonlinear Regression
+
+## Polynomials
+
+## Regression Splines
+
+## Smoothing Splines
+
+## Sinces and cosines
+
+## A glimpse of wavelets
