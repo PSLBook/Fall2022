@@ -1,11 +1,38 @@
-# Hello bookdown 
+# Introduction
 
-All chapters start with a first-level heading followed by your chapter title, like the line above. There should be only one first-level heading (`#`) per .Rmd file.
 
-## A section
+**Notes**
+[[lec_W1.1_Introduction_Statistical_Learning.pdf](https://liangfgithub.github.io/Notes/lec_W1.1_Introduction_Statistical_Learning.pdf)]
+[[lec_W1.2_kNN_vs_LinearRegression.pdf](https://liangfgithub.github.io/Notes/lec_W1.2_kNN_vs_LinearRegression.pdf)]
+[[lec_W1.2_kNN_vs_LinearRegression_figs.pdf](https://liangfgithub.github.io/Notes/lec_W1.2_kNN_vs_LinearRegression_figs.pdf)]
+[[lec_W1.3_Introduction_LearningTheory.pdf](https://liangfgithub.github.io/Notes/lec_W1.3_Introduction_LearningTheory.pdf)]
 
-All chapter sections start with a second-level (`##`) or higher heading followed by your section title, like the sections above and below here. You can have as many as you want within a chapter.
 
-### An unnumbered section {-}
+**R/Python Code:**
+[[Rcode_W1_SimulationStudy.html](https://liangfgithub.github.io/Rcode_W1_SimulationStudy.html)]
+[[Rcode_W1_Examples_from_ESL.html](https://liangfgithub.github.io/Rcode_W1_Examples_from_ESL.html)]
+[[Python_W1_SimulationStudy.html](https://liangfgithub.github.io/Python_W1_SimulationStudy.html)]
 
-Chapters and sections are numbered by default. To un-number a heading, add a `{.unnumbered}` or the shorter `{-}` at the end of the heading, like in this section.
+
+## Introduction to Statistical Learning
+
+### Types of learning problems 
+
+### Challenge of supervised learning 
+
+### Curse of dimensionality 
+
+### A glimpse of learning theory 
+
+### 1.5 Bias and variance tradeoff 
+
+##  Least squares vs. nearest neighbors
+
+### Introduction to LS and kNN 
+
+### 2.2 Simulation study with R 
+
+### 2.3 Compute Bayes rule 
+
+### Discussion 
+

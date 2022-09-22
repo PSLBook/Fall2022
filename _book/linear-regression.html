@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | Practical Statistical Learning</title>
+  <title>Chapter 2 Linear Regression | Practical Statistical Learning</title>
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | Practical Statistical Learning" />
+  <meta property="og:title" content="Chapter 2 Linear Regression | Practical Statistical Learning" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | Practical Statistical Learning" />
+  <meta name="twitter:title" content="Chapter 2 Linear Regression | Practical Statistical Learning" />
   
   <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
@@ -36,8 +36,8 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="introduction.html"/>
+<link rel="next" href="parts.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -177,19 +177,62 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="linear-regression" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Linear Regression<a href="linear-regression.html#linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><strong>Notes</strong>
+[<a href="https://liangfgithub.github.io/Notes/lec_W2.1_LinearRegression_MLR.pdf">lec_W2.1_LinearRegression_MLR.pdf</a>]
+[<a href="https://liangfgithub.github.io/Notes/lec_W2.2_LinearRegression_Geometry.pdf">lec_W2.2_LinearRegression_Geometry.pdf</a>]
+[<a href="https://liangfgithub.github.io/Notes/lec_W2.3_LinearRegression_Practice.pdf">lec_W2.3_LinearRegression_Practice.pdf</a>]
+[<a href="https://liangfgithub.github.io/Notes/lec_W2_appendix_SLR.pdf">lec_W2_appendix_SLR.pdf</a>]</p>
+<p><strong>R/Python Code</strong>
+[<a href="https://liangfgithub.github.io/Rcode_W2_LinearRegression.html">Rcode_W2_LinearRegression.html</a>]
+[<a href="https://liangfgithub.github.io/Python_W2_LinearRegression_1.html">Python_W2_LinearRegression_1.html</a>]
+[<a href="https://liangfgithub.github.io/Python_W2_LinearRegression_2.html">Python_W2_LinearRegression_2.html</a>]</p>
+<div id="good-predictions-squared-error-loss-and-in-sample-error" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Good predictions: Squared error loss and in-sample error<a href="linear-regression.html#good-predictions-squared-error-loss-and-in-sample-error" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="matrices-and-least-squares-estimates" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Matrices and least-squares estimates<a href="linear-regression.html#matrices-and-least-squares-estimates" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="regression-inference" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Regression inference<a href="linear-regression.html#regression-inference" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="prediction-using-least-squares" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Prediction using least-squares<a href="linear-regression.html#prediction-using-least-squares" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="geometric-interpretation" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Geometric interpretation<a href="linear-regression.html#geometric-interpretation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="basic-concepts-in-vector-spaces" class="section level3 hasAnchor" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> Basic concepts in vector spaces<a href="linear-regression.html#basic-concepts-in-vector-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="ls-and-projection" class="section level3 hasAnchor" number="2.5.2">
+<h3><span class="header-section-number">2.5.2</span> LS and projection<a href="linear-regression.html#ls-and-projection" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+</div>
+<div id="practical-issues" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Practical issues<a href="linear-regression.html#practical-issues" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="using-r" class="section level3 hasAnchor" number="2.6.1">
+<h3><span class="header-section-number">2.6.1</span> Using R<a href="linear-regression.html#using-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="interpret-ls-coefficients" class="section level3 hasAnchor" number="2.6.2">
+<h3><span class="header-section-number">2.6.2</span> Interpret LS coefficients<a href="linear-regression.html#interpret-ls-coefficients" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="handle-categorical-variables" class="section level3 hasAnchor" number="2.6.3">
+<h3><span class="header-section-number">2.6.3</span> Handle categorical variables<a href="linear-regression.html#handle-categorical-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="outliers-and-rank-deficiency" class="section level3 hasAnchor" number="2.6.4">
+<h3><span class="header-section-number">2.6.4</span> Outliers and rank deficiency<a href="linear-regression.html#outliers-and-rank-deficiency" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="parts.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -220,7 +263,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/%s",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-cross-refs.Rmd",
 "text": "Edit"
 },
 "history": {
