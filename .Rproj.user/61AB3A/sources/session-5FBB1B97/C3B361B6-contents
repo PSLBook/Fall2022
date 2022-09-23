@@ -1,0 +1,158 @@
+--- 
+title: "Practical Statistical Learning"
+author: "John Marden and Feng Liang"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  This is a minimal example of using the bookdown package to write a book.
+  The HTML output format for this example is bookdown::gitbook,
+  set in the _output.yml file.
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+---
+--- 
+title: "Practical Statistical Learning"
+author: "John Marden and Feng Liang"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  This is a minimal example of using the bookdown package to write a book.
+  The HTML output format for this example is bookdown::gitbook,
+  set in the _output.yml file.
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+---
+
+# Preface{-}
+
+These notes are based on a course in statistical learning developed by John Marden and Feng Liang at UIUC using the text **The Elements of Statistical Learning** by Hastie, Tibshirani and Friedman [https://hastie.su.domains/ElemStatLearn/](https://hastie.su.domains/ElemStatLearn/). 
+
+
+<!--chapter:end:index.Rmd-->
+
+
+# Introduction {#intro}
+
+Placeholder
+
+
+## Introduction to Statistical Learning
+### Types of learning problems 
+### Challenge of supervised learning 
+### Curse of dimensionality 
+### A glimpse of learning theory 
+### Bias and variance tradeoff 
+##  Least squares vs. nearest neighbors
+### Introduction to LS and kNN 
+### Simulation study with R
+### Simulation study with Python
+### Compute Bayes rule 
+### Discussion 
+
+<!--chapter:end:01-intro.Rmd-->
+
+
+# Linear Regression {#linear-model-chapter}
+
+Placeholder
+
+
+## Good predictions: Squared error loss and in-sample error {#good-pred-section}
+## Matrices and least-squares estimates {#matrix-section}
+## Regression inference
+## Geometric interpretation 
+###  Basic concepts in vector spaces
+###  LS and projection
+## In-sample prediction
+## Practical issues
+### Using R
+### Interpret LS coefficients
+### Handle categorical variables
+### Outliers and rank deficiency
+
+<!--chapter:end:02-linear-regression.Rmd-->
+
+# Variable Selection and Regularization
+
+**Notes**
+[[lec_W3_VariableSelection.pdf](https://liangfgithub.github.io/Notes/lec_W3_VariableSelection.pdf)]
+[[lec_W3_PCR.pdf](https://liangfgithub.github.io/Notes/lec_W3_PCR.pdf)]
+[[lec_W3_More_on_Ridge_Lasso.pdf](https://liangfgithub.github.io/Notes/lec_W3_More_on_Ridge_Lasso.pdf)]
+
+**R/Python Code**
+[[Rcode_W3_VarSel_SubsetSelection](https://liangfgithub.github.io/Rcode_W3_VarSel_SubsetSelection.html)]
+[[Rcode_W3_VarSel_RidgeLasso](https://liangfgithub.github.io/Rcode_W3_VarSel_RidgeLasso.html)]
+
+## Subset selection
+
+
+## Ridge regression
+
+## Lasso regression
+
+<!--chapter:end:03-regularization.Rmd-->
+
+# Regression Trees
+
+<!--chapter:end:04-regression-trees.Rmd-->
+
+
+# Nonlinear Regression
+
+Placeholder
+
+
+## Polynomials
+### Model selection
+### Using R
+## Regression Splines
+## Smoothing Splines
+## Sinces and cosines
+## A glimpse of wavelets
+
+<!--chapter:end:05-nonlinear-regression.Rmd-->
+
+# Clustering Analysis
+
+<!--chapter:end:06-clustering.Rmd-->
+
+# Latent Structure Models
+
+<!--chapter:end:07-latent-structure-models.Rmd-->
+
+# More on Clustering
+
+<!--chapter:end:08-more-on-clustering.Rmd-->
+
+# Distriminant Analysis
+
+<!--chapter:end:09-distriminant-analysis.Rmd-->
+
+# Logistic Regression
+
+<!--chapter:end:10-logistic-regression.Rmd-->
+
+# Support Vector Machines
+
+<!--chapter:end:11-SVM.Rmd-->
+
+# Classification Trees and Boosting
+
+<!--chapter:end:12-classification-trees.Rmd-->
+
+# Recommender System
+
+<!--chapter:end:13-recommender.Rmd-->
+
+# Introduction to Deep Learning
+
+<!--chapter:end:14-introduction-DL.Rmd-->
+

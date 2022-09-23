@@ -1,0 +1,17 @@
+# Variable Selection and Regularization
+
+**Notes**
+[[lec_W3_VariableSelection.pdf](https://liangfgithub.github.io/Notes/lec_W3_VariableSelection.pdf)]
+[[lec_W3_PCR.pdf](https://liangfgithub.github.io/Notes/lec_W3_PCR.pdf)]
+[[lec_W3_More_on_Ridge_Lasso.pdf](https://liangfgithub.github.io/Notes/lec_W3_More_on_Ridge_Lasso.pdf)]
+
+**R/Python Code**
+[[Rcode_W3_VarSel_SubsetSelection](https://liangfgithub.github.io/Rcode_W3_VarSel_SubsetSelection.html)]
+[[Rcode_W3_VarSel_RidgeLasso](https://liangfgithub.github.io/Rcode_W3_VarSel_RidgeLasso.html)]
+
+## Subset selection
+
+
+## Ridge regression
+
+## Lasso regression

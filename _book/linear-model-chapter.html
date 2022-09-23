@@ -26,7 +26,7 @@ The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   
 
-<meta name="author" content="John Marten and Feng Liang" />
+<meta name="author" content="John Marden and Feng Liang" />
 
 
 <meta name="date" content="2022-09-22" />
@@ -103,12 +103,12 @@ set in the _output.yml file.</p>" />
 <li class="chapter" data-level="2.1" data-path="linear-model-chapter.html"><a href="linear-model-chapter.html#good-pred-section"><i class="fa fa-check"></i><b>2.1</b> Good predictions: Squared error loss and in-sample error</a></li>
 <li class="chapter" data-level="2.2" data-path="linear-model-chapter.html"><a href="linear-model-chapter.html#matrix-section"><i class="fa fa-check"></i><b>2.2</b> Matrices and least-squares estimates</a></li>
 <li class="chapter" data-level="2.3" data-path="linear-model-chapter.html"><a href="linear-model-chapter.html#regression-inference"><i class="fa fa-check"></i><b>2.3</b> Regression inference</a></li>
-<li class="chapter" data-level="2.4" data-path="linear-model-chapter.html"><a href="linear-model-chapter.html#in-sample-prediction"><i class="fa fa-check"></i><b>2.4</b> In-sample prediction</a></li>
-<li class="chapter" data-level="2.5" data-path="linear-model-chapter.html"><a href="linear-model-chapter.html#geometric-interpretation"><i class="fa fa-check"></i><b>2.5</b> Geometric interpretation</a>
+<li class="chapter" data-level="2.4" data-path="linear-model-chapter.html"><a href="linear-model-chapter.html#geometric-interpretation"><i class="fa fa-check"></i><b>2.4</b> Geometric interpretation</a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="linear-model-chapter.html"><a href="linear-model-chapter.html#basic-concepts-in-vector-spaces"><i class="fa fa-check"></i><b>2.5.1</b> Basic concepts in vector spaces</a></li>
-<li class="chapter" data-level="2.5.2" data-path="linear-model-chapter.html"><a href="linear-model-chapter.html#ls-and-projection"><i class="fa fa-check"></i><b>2.5.2</b> LS and projection</a></li>
+<li class="chapter" data-level="2.4.1" data-path="linear-model-chapter.html"><a href="linear-model-chapter.html#basic-concepts-in-vector-spaces"><i class="fa fa-check"></i><b>2.4.1</b> Basic concepts in vector spaces</a></li>
+<li class="chapter" data-level="2.4.2" data-path="linear-model-chapter.html"><a href="linear-model-chapter.html#ls-and-projection"><i class="fa fa-check"></i><b>2.4.2</b> LS and projection</a></li>
 </ul></li>
+<li class="chapter" data-level="2.5" data-path="linear-model-chapter.html"><a href="linear-model-chapter.html#in-sample-prediction"><i class="fa fa-check"></i><b>2.5</b> In-sample prediction</a></li>
 <li class="chapter" data-level="2.6" data-path="linear-model-chapter.html"><a href="linear-model-chapter.html#practical-issues"><i class="fa fa-check"></i><b>2.6</b> Practical issues</a>
 <ul>
 <li class="chapter" data-level="2.6.1" data-path="linear-model-chapter.html"><a href="linear-model-chapter.html#using-r"><i class="fa fa-check"></i><b>2.6.1</b> Using R</a></li>
@@ -126,7 +126,11 @@ set in the _output.yml file.</p>" />
 <li class="chapter" data-level="4" data-path="regression-trees.html"><a href="regression-trees.html"><i class="fa fa-check"></i><b>4</b> Regression Trees</a></li>
 <li class="chapter" data-level="5" data-path="nonlinear-regression.html"><a href="nonlinear-regression.html"><i class="fa fa-check"></i><b>5</b> Nonlinear Regression</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="nonlinear-regression.html"><a href="nonlinear-regression.html#polynomials"><i class="fa fa-check"></i><b>5.1</b> Polynomials</a></li>
+<li class="chapter" data-level="5.1" data-path="nonlinear-regression.html"><a href="nonlinear-regression.html#polynomials"><i class="fa fa-check"></i><b>5.1</b> Polynomials</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="nonlinear-regression.html"><a href="nonlinear-regression.html#model-selection"><i class="fa fa-check"></i><b>5.1.1</b> Model selection</a></li>
+<li class="chapter" data-level="5.1.2" data-path="nonlinear-regression.html"><a href="nonlinear-regression.html#using-r-1"><i class="fa fa-check"></i><b>5.1.2</b> Using R</a></li>
+</ul></li>
 <li class="chapter" data-level="5.2" data-path="nonlinear-regression.html"><a href="nonlinear-regression.html#regression-splines"><i class="fa fa-check"></i><b>5.2</b> Regression Splines</a></li>
 <li class="chapter" data-level="5.3" data-path="nonlinear-regression.html"><a href="nonlinear-regression.html#smoothing-splines"><i class="fa fa-check"></i><b>5.3</b> Smoothing Splines</a></li>
 <li class="chapter" data-level="5.4" data-path="nonlinear-regression.html"><a href="nonlinear-regression.html#sinces-and-cosines"><i class="fa fa-check"></i><b>5.4</b> Sinces and cosines</a></li>
@@ -224,11 +228,10 @@ In particular situations, you may have a more precise knowledge of what the new 
 \text{RSS}(\beta_0,\ldots,\beta_p) = \sum_{i=1}^n (y_i-\beta_0- \beta_1 x_{i1}-\cdots- \beta_p x_{ip})^2.
 \tag{2.5}
 \end{equation}\]</span>
-The function is a nice convex function in the <span class="math inline">\(\beta_j\)</span>’s, so setting the derivatives equal to zero and solving will
-yield the minimum. The derivatives are
+The function is a nice convex function in the <span class="math inline">\(\beta_j\)</span>’s, so setting the derivatives equal to zero and solving will yield the minimum. The derivatives are
 <span class="math display" id="eq:lm10">\[\begin{align}
-{\partial\over\partial \beta_0} \text{RSS} (\beta_0,\ldots,\beta_p) &amp;= -2~\sum_{i=1}^N (y_i-\beta_0-\beta_1 x_{i1}-\cdots-\beta_p x_{ip});\\
-{\partial\over\partial b_j} \text{RSS} (\beta_0,\ldots,\beta_p) &amp;= -2~\sum_{i=1}^N x_{ij}(y_i-\beta_0-\beta_1 x_{i1}-\cdots-\beta_p x_{ip}), \quad j\ge1.
+\frac{\partial}{\partial \beta_0} \text{RSS} (\beta_0,\ldots,\beta_p) &amp;= -2~\sum_{i=1}^n (y_i-\beta_0-\beta_1 x_{i1}-\cdots-\beta_p x_{ip});\\
+\frac{\partial}{\partial \beta_j} \text{RSS} (\beta_0,\ldots,\beta_p) &amp;= -2~\sum_{i=1}^n x_{ij}(y_i-\beta_0-\beta_1 x_{i1}-\cdots-\beta_p x_{ip}), \quad j\ge1.
 \tag{2.6}
 \end{align}\]</span></p>
 <p>Write the equations in matrix form, starting with
@@ -237,16 +240,16 @@ yield the minimum. The derivatives are
 y_1-\beta_0-\beta_1 x_{11}-\cdots-\beta_p x_{1p}\\
 y_2-\beta_0-\beta_1 x_{21}-\cdots-\beta_p x_{2p}\\
 \vdots\\
-y_N-\beta_0-\beta_1 x_{N1}-\cdots-\beta_p x_{Np}
+y_n-\beta_0-\beta_1 x_{n1}-\cdots-\beta_p x_{np}
 \end{pmatrix} =
 \begin{pmatrix}
-y_1\\y_2\\\vdots\\y_N
+y_1\\y_2\\\vdots\\y_n
 \end{pmatrix} -
 \begin{pmatrix}
 1&amp;x_{11}&amp;x_{12}&amp;\cdots&amp;x_{1p}\\
 1&amp;x_{21}&amp;x_{22}&amp;\cdots&amp;x_{2p}\\
 \vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
-1&amp;x_{N1}&amp;x_{N2}&amp;\cdots&amp;x_{Np}
+1&amp;x_{n1}&amp;x_{n2}&amp;\cdots&amp;x_{np}
 \end{pmatrix}
 \begin{pmatrix}
 \beta_0\\\beta_1\\\vdots\\\beta_p
@@ -257,7 +260,7 @@ which is equal to <span class="math inline">\(\mathbf{y} - \mathbf{X}\boldsymbol
 <p>Take the two summations in equations <a href="linear-model-chapter.html#eq:lm10">(2.6)</a> (without the <span class="math inline">\(-2\)</span>’s) and set to 0 to get
 <span class="math display" id="eq:lm12">\[\begin{align}
 \begin{pmatrix}1&amp;1&amp;\cdots&amp;1\end{pmatrix}(\mathbf{y}-\mathbf{x}\boldsymbol{\beta})&amp;=0;\\
-\begin{pmatrix}x_{1j}&amp;x_{2j}&amp;\cdots&amp;x_{Nj}\end{pmatrix}(\mathbf{y}-\mathbf{x}\boldsymbol{\beta})&amp;=0, \quad j\ge 1.
+\begin{pmatrix}x_{1j}&amp;x_{2j}&amp;\cdots&amp;x_{nj}\end{pmatrix}(\mathbf{y}-\mathbf{x}\boldsymbol{\beta})&amp;=0, \quad j\ge 1.
 \tag{2.8}
 \end{align}\]</span>
 Note that the row vectors in <a href="linear-model-chapter.html#eq:lm12">(2.8)</a> on the left are the <span class="math inline">\((p+1)\)</span> columns of <span class="math inline">\(\mathbf{X}\)</span>, yielding
@@ -284,7 +287,7 @@ where
 \end{pmatrix} ~~\text{and}~~
 \mathbf{e} =
 \begin{pmatrix}
-e_1\\e_2\\\vdots\\e_N
+e_1\\e_2\\\vdots\\e_n
 \end{pmatrix},
 \tag{2.12}
 \end{equation}\]</span>
@@ -297,8 +300,17 @@ the least squares estimate of <span class="math inline">\(\boldsymbol{\beta}\)</
 <div id="regression-inference" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Regression inference<a href="linear-model-chapter.html#regression-inference" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 </div>
-<div id="in-sample-prediction" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> In-sample prediction<a href="linear-model-chapter.html#in-sample-prediction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="geometric-interpretation" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Geometric interpretation<a href="linear-model-chapter.html#geometric-interpretation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="basic-concepts-in-vector-spaces" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Basic concepts in vector spaces<a href="linear-model-chapter.html#basic-concepts-in-vector-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="ls-and-projection" class="section level3 hasAnchor" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> LS and projection<a href="linear-model-chapter.html#ls-and-projection" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+</div>
+<div id="in-sample-prediction" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> In-sample prediction<a href="linear-model-chapter.html#in-sample-prediction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When considering the in-sample error for the linear model, we have the same model for the training sample and the new sample:
 <span class="math display" id="eq:predls1">\[\begin{equation}
 \mathbf{Y}=\mathbf{X}\boldsymbol{\beta}+\mathbf{e}~~\mbox{and}~~\mathbf{Y}^{*} = \mathbf{X}\boldsymbol{\beta}+\mathbf{e}^{*}.
@@ -380,7 +392,7 @@ The third line follows from <a href="linear-model-chapter.html#eq:predls9">(2.24
 <span class="math display" id="eq:cov8">\[\begin{align}
 \mathbb{E} [\|\mathbf{Z} \|^2] &amp;= \mathbb{E} [Z_1^2+\cdots+Z_m^2]\\
 &amp;= \mathbb{E}[Z_1^2]+\cdots+\mathbb{E}[Z_m^2] \\
-&amp;= \mathbb{E}[Z_1]^2+\text{Var}[Z_1]^2+\cdots+\mathbb{E} [Z_K]^2+ \text{Var}[Z_m]^2\\
+&amp;= \mathbb{E}[Z_1]^2+\text{Var}[Z_1]^2+\cdots+\mathbb{E} [Z_m]^2+ \text{Var}[Z_m]^2\\
 &amp;= \|\mathbb{E} \mathbf{Z}\|^2 + \text{tr}(\text{Cov}[\mathbf{Z}]),
 \tag{2.26}
 \end{align}\]</span>
@@ -395,7 +407,7 @@ covariance matrix are the variances.</p>
 \end{align}\]</span>
 Putting that answer in <a href="linear-model-chapter.html#eq:predls10">(2.25)</a> we obtain
 <span class="math display" id="eq:predls12">\[\begin{equation}
-ERR_{in} = \sigma^2_e + \sigma^2_e~{p+1\over N}.
+\text{ERR}_{\text{in}} = \sigma^2_e + \sigma^2_e \frac{p+1}{n}.
 \tag{2.28}
 \end{equation}\]</span></p>
 <p>This expected in-sample error is a simple function of three quantities. We will use it as a benchmark. The goal in the rest
@@ -403,16 +415,7 @@ of this section will be to find, if possible, predictors that have lower in-samp
 <p>There’s not much we can do about <span class="math inline">\(\sigma^2_e\)</span>,
 since it is the inherent variance of the observations. Taking a bigger training sample will decrease the error,
 as one would expect. The one part we can work with is the <span class="math inline">\(p\)</span>, that is, try to reduce <span class="math inline">\(p\)</span> by eliminating some of the
-explanatory variables. Will that strategy work? It is the subject of the next subsection.</p>
-</div>
-<div id="geometric-interpretation" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> Geometric interpretation<a href="linear-model-chapter.html#geometric-interpretation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="basic-concepts-in-vector-spaces" class="section level3 hasAnchor" number="2.5.1">
-<h3><span class="header-section-number">2.5.1</span> Basic concepts in vector spaces<a href="linear-model-chapter.html#basic-concepts-in-vector-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-</div>
-<div id="ls-and-projection" class="section level3 hasAnchor" number="2.5.2">
-<h3><span class="header-section-number">2.5.2</span> LS and projection<a href="linear-model-chapter.html#ls-and-projection" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-</div>
+explanatory variables. Will that strategy work? It is the subject of the next chapter.</p>
 </div>
 <div id="practical-issues" class="section level2 hasAnchor" number="2.6">
 <h2><span class="header-section-number">2.6</span> Practical issues<a href="linear-model-chapter.html#practical-issues" class="anchor-section" aria-label="Anchor link to header"></a></h2>

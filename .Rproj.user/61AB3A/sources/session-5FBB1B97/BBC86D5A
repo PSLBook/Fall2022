@@ -1,26 +1,26 @@
 {
-    "id": "3604E8F2",
-    "path": "~/Box Sync/Dolphin/GitHub/Fall2022/02-linear-regression.Rmd",
-    "project_path": "02-linear-regression.Rmd",
+    "id": "BBC86D5A",
+    "path": "~/Box Sync/Dolphin/GitHub/Fall2022/05-nonlinear-regression.Rmd",
+    "project_path": "05-nonlinear-regression.Rmd",
     "type": "r_markdown",
-    "hash": "1445372549",
+    "hash": "3089612357",
     "contents": "",
     "dirty": false,
-    "created": 1663882388105.0,
+    "created": 1663895324453.0,
     "source_on_save": false,
     "relative_order": 2,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "267,85",
-        "scrollLine": "246"
+        "cursorPosition": "132,13",
+        "scrollLine": "123"
     },
     "folds": "",
-    "lastKnownWriteTime": 1663895005,
+    "lastKnownWriteTime": 1663898006,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1663895005269,
+    "last_content_update": 1663898006429,
     "read_only": false,
     "read_only_alternatives": []
 }
