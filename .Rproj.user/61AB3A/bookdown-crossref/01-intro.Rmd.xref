@@ -1,4 +1,14 @@
-h1:hello-bookdown Hello bookdown
-h2:a-section A section
-h3:an-unnumbered-section An unnumbered section
+h1:intro Introduction
+h2:introduction-to-statistical-learning Introduction to Statistical Learning
+h3:types-of-learning-problems Types of learning problems
+h3:challenge-of-supervised-learning Challenge of supervised learning
+h3:curse-of-dimensionality Curse of dimensionality
+h3:a-glimpse-of-learning-theory A glimpse of learning theory
+h3:bias-and-variance-tradeoff Bias and variance tradeoff
+h2:least-squares-vs.-nearest-neighbors Least squares vs. nearest neighbors
+h3:introduction-to-ls-and-knn Introduction to LS and kNN
+h3:simulation-study-with-r Simulation study with R
+h3:simulation-study-with-python Simulation study with Python
+h3:compute-bayes-rule Compute Bayes rule
+h3:discussion Discussion
 

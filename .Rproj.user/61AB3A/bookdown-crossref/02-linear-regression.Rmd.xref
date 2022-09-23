@@ -1,0 +1,14 @@
+h1:linear-model-chapter Linear Regression
+h2:good-pred-section Good predictions: Squared error loss and in-sample error
+h2:matrix-section Matrices and least-squares estimates
+h2:regression-inference Regression inference
+h2:geometric-interpretation Geometric interpretation
+h3:basic-concepts-in-vector-spaces Basic concepts in vector spaces
+h3:ls-and-projection LS and projection
+h2:in-sample-prediction In-sample prediction
+h2:practical-issues Practical issues
+h3:using-r Using R
+h3:interpret-ls-coefficients Interpret LS coefficients
+h3:handle-categorical-variables Handle categorical variables
+h3:outliers-and-rank-deficiency Outliers and rank deficiency
+

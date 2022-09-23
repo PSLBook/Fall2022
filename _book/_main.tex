@@ -1,0 +1,263 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Practical Statistical Learning},
+  pdfauthor={John Marten and Feng Liang},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Practical Statistical Learning}
+\author{John Marten and Feng Liang}
+\date{2022-09-22}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{preface}{%
+\chapter*{Preface}\label{preface}}
+\addcontentsline{toc}{chapter}{Preface}
+
+These notes are based on a course in statistical learning developed by John Marten and Feng Liang at UIUC using the text \textbf{The Elements of Statistical Learning} by Hastie, Tibshirani and Friedman \url{https://hastie.su.domains/ElemStatLearn/}.
+
+\hypertarget{introduction}{%
+\chapter{Introduction}\label{introduction}}
+
+\textbf{Notes}
+{[}\href{https://liangfgithub.github.io/Notes/lec_W1.1_Introduction_Statistical_Learning.pdf}{lec\_W1.1\_Introduction\_Statistical\_Learning.pdf}{]}
+{[}\href{https://liangfgithub.github.io/Notes/lec_W1.2_kNN_vs_LinearRegression.pdf}{lec\_W1.2\_kNN\_vs\_LinearRegression.pdf}{]}
+{[}\href{https://liangfgithub.github.io/Notes/lec_W1.2_kNN_vs_LinearRegression_figs.pdf}{lec\_W1.2\_kNN\_vs\_LinearRegression\_figs.pdf}{]}
+{[}\href{https://liangfgithub.github.io/Notes/lec_W1.3_Introduction_LearningTheory.pdf}{lec\_W1.3\_Introduction\_LearningTheory.pdf}{]}
+
+\textbf{R/Python Code:}
+{[}\href{https://liangfgithub.github.io/Rcode_W1_SimulationStudy.html}{Rcode\_W1\_SimulationStudy.html}{]}
+{[}\href{https://liangfgithub.github.io/Rcode_W1_Examples_from_ESL.html}{Rcode\_W1\_Examples\_from\_ESL.html}{]}
+{[}\href{https://liangfgithub.github.io/Python_W1_SimulationStudy.html}{Python\_W1\_SimulationStudy.html}{]}
+
+\hypertarget{introduction-to-statistical-learning}{%
+\section{Introduction to Statistical Learning}\label{introduction-to-statistical-learning}}
+
+\hypertarget{types-of-learning-problems}{%
+\subsection{Types of learning problems}\label{types-of-learning-problems}}
+
+\hypertarget{challenge-of-supervised-learning}{%
+\subsection{Challenge of supervised learning}\label{challenge-of-supervised-learning}}
+
+\hypertarget{curse-of-dimensionality}{%
+\subsection{Curse of dimensionality}\label{curse-of-dimensionality}}
+
+\hypertarget{a-glimpse-of-learning-theory}{%
+\subsection{A glimpse of learning theory}\label{a-glimpse-of-learning-theory}}
+
+\hypertarget{bias-and-variance-tradeoff}{%
+\subsection{1.5 Bias and variance tradeoff}\label{bias-and-variance-tradeoff}}
+
+\hypertarget{least-squares-vs.-nearest-neighbors}{%
+\section{Least squares vs.~nearest neighbors}\label{least-squares-vs.-nearest-neighbors}}
+
+\hypertarget{introduction-to-ls-and-knn}{%
+\subsection{Introduction to LS and kNN}\label{introduction-to-ls-and-knn}}
+
+\hypertarget{simulation-study-with-r}{%
+\subsection{2.2 Simulation study with R}\label{simulation-study-with-r}}
+
+\hypertarget{compute-bayes-rule}{%
+\subsection{2.3 Compute Bayes rule}\label{compute-bayes-rule}}
+
+\hypertarget{discussion}{%
+\subsection{Discussion}\label{discussion}}
+
+\hypertarget{linear-regression}{%
+\chapter{Linear Regression}\label{linear-regression}}
+
+\textbf{Notes}
+{[}\href{https://liangfgithub.github.io/Notes/lec_W2.1_LinearRegression_MLR.pdf}{lec\_W2.1\_LinearRegression\_MLR.pdf}{]}
+{[}\href{https://liangfgithub.github.io/Notes/lec_W2.2_LinearRegression_Geometry.pdf}{lec\_W2.2\_LinearRegression\_Geometry.pdf}{]}
+{[}\href{https://liangfgithub.github.io/Notes/lec_W2.3_LinearRegression_Practice.pdf}{lec\_W2.3\_LinearRegression\_Practice.pdf}{]}
+{[}\href{https://liangfgithub.github.io/Notes/lec_W2_appendix_SLR.pdf}{lec\_W2\_appendix\_SLR.pdf}{]}
+
+\textbf{R/Python Code}
+{[}\href{https://liangfgithub.github.io/Rcode_W2_LinearRegression.html}{Rcode\_W2\_LinearRegression.html}{]}
+{[}\href{https://liangfgithub.github.io/Python_W2_LinearRegression_1.html}{Python\_W2\_LinearRegression\_1.html}{]}
+{[}\href{https://liangfgithub.github.io/Python_W2_LinearRegression_2.html}{Python\_W2\_LinearRegression\_2.html}{]}
+
+\hypertarget{good-predictions-squared-error-loss-and-in-sample-error}{%
+\section{Good predictions: Squared error loss and in-sample error}\label{good-predictions-squared-error-loss-and-in-sample-error}}
+
+\hypertarget{matrices-and-least-squares-estimates}{%
+\section{Matrices and least-squares estimates}\label{matrices-and-least-squares-estimates}}
+
+\hypertarget{regression-inference}{%
+\section{Regression inference}\label{regression-inference}}
+
+\hypertarget{prediction-using-least-squares}{%
+\section{Prediction using least-squares}\label{prediction-using-least-squares}}
+
+\hypertarget{geometric-interpretation}{%
+\section{Geometric interpretation}\label{geometric-interpretation}}
+
+\hypertarget{basic-concepts-in-vector-spaces}{%
+\subsection{Basic concepts in vector spaces}\label{basic-concepts-in-vector-spaces}}
+
+\hypertarget{ls-and-projection}{%
+\subsection{LS and projection}\label{ls-and-projection}}
+
+\hypertarget{practical-issues}{%
+\section{Practical issues}\label{practical-issues}}
+
+\hypertarget{using-r}{%
+\subsection{Using R}\label{using-r}}
+
+\hypertarget{interpret-ls-coefficients}{%
+\subsection{Interpret LS coefficients}\label{interpret-ls-coefficients}}
+
+\hypertarget{handle-categorical-variables}{%
+\subsection{Handle categorical variables}\label{handle-categorical-variables}}
+
+\hypertarget{outliers-and-rank-deficiency}{%
+\subsection{Outliers and rank deficiency}\label{outliers-and-rank-deficiency}}
+
+\hypertarget{variable-selection-and-regularization}{%
+\chapter{Variable Selection and Regularization}\label{variable-selection-and-regularization}}
+
+\textbf{Notes}
+{[}\href{https://liangfgithub.github.io/Notes/lec_W3_VariableSelection.pdf}{lec\_W3\_VariableSelection.pdf}{]}
+{[}\href{https://liangfgithub.github.io/Notes/lec_W3_PCR.pdf}{lec\_W3\_PCR.pdf}{]}
+{[}\href{https://liangfgithub.github.io/Notes/lec_W3_More_on_Ridge_Lasso.pdf}{lec\_W3\_More\_on\_Ridge\_Lasso.pdf}{]}
+
+\textbf{R/Python Code}
+{[}\href{https://liangfgithub.github.io/Rcode_W3_VarSel_SubsetSelection.html}{Rcode\_W3\_VarSel\_SubsetSelection}{]}
+{[}\href{https://liangfgithub.github.io/Rcode_W3_VarSel_RidgeLasso.html}{Rcode\_W3\_VarSel\_RidgeLasso}{]}
+
+\hypertarget{subset-selection}{%
+\section{Subset selection}\label{subset-selection}}
+
+\hypertarget{ridge-regression}{%
+\section{Ridge regression}\label{ridge-regression}}
+
+\hypertarget{lasso-regression}{%
+\section{Lasso regression}\label{lasso-regression}}
+
+\hypertarget{regression-trees}{%
+\chapter{Regression Trees}\label{regression-trees}}
+
+\hypertarget{nonlinear-regression}{%
+\chapter{Nonlinear Regression}\label{nonlinear-regression}}
+
+\hypertarget{polynomials}{%
+\section{Polynomials}\label{polynomials}}
+
+\hypertarget{regression-splines}{%
+\section{Regression Splines}\label{regression-splines}}
+
+\hypertarget{smoothing-splines}{%
+\section{Smoothing Splines}\label{smoothing-splines}}
+
+\hypertarget{sinces-and-cosines}{%
+\section{Sinces and cosines}\label{sinces-and-cosines}}
+
+\hypertarget{a-glimpse-of-wavelets}{%
+\section{A glimpse of wavelets}\label{a-glimpse-of-wavelets}}
+
+\hypertarget{clustering-analysis}{%
+\chapter{Clustering Analysis}\label{clustering-analysis}}
+
+\hypertarget{latent-structure-models}{%
+\chapter{Latent Structure Models}\label{latent-structure-models}}
+
+\hypertarget{more-on-clustering}{%
+\chapter{More on Clustering}\label{more-on-clustering}}
+
+\hypertarget{distriminant-analysis}{%
+\chapter{Distriminant Analysis}\label{distriminant-analysis}}
+
+\hypertarget{logistic-regression}{%
+\chapter{Logistic Regression}\label{logistic-regression}}
+
+\hypertarget{support-vector-machines}{%
+\chapter{Support Vector Machines}\label{support-vector-machines}}
+
+\hypertarget{classification-trees-and-boosting}{%
+\chapter{Classification Trees and Boosting}\label{classification-trees-and-boosting}}
+
+\hypertarget{recommender-system}{%
+\chapter{Recommender System}\label{recommender-system}}
+
+\hypertarget{introduction-to-deep-learning}{%
+\chapter{Introduction to Deep Learning}\label{introduction-to-deep-learning}}
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}
